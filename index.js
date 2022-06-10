@@ -25,6 +25,14 @@ const init = async () => {
         }
     });
 
+    server.route({
+        method: 'GET',
+        path: '/test',
+        handler: (request, h) => {
+            return h.response('Hello test!');
+        }
+    });
+
     await server.start();
     console.log(`Server running at: ${server.info.uri}`);
     //module.exports = server;
