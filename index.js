@@ -21,7 +21,9 @@ const init = async () => {
 
     await server.start();
     console.log(`Server running at: ${server.info.uri}`);
-    module.exports = server;
+    //module.exports = server;
 };
 
 init();
+
+module.exports = server;
